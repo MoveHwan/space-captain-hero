@@ -5,7 +5,7 @@ using UnityEngine;
 public class BuffItem : MonoBehaviour
 {
     GameObject item;
-
+    ///
     private void Awake()
     {
         item = GetComponent<GameObject>();
