@@ -6,8 +6,11 @@ public class Enemy : MonoBehaviour
 {
     public float speed;
     public Rigidbody2D target;
+
     Vector2 nextVec;
     Animator anim;
+
+
 
     bool isLive;
 
@@ -17,7 +20,10 @@ public class Enemy : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody2D>();
         spriter = GetComponent<SpriteRenderer>();
+
         anim = GetComponent<Animator>();
+
+
     }
 
     // Update is called once per frame
@@ -27,7 +33,9 @@ public class Enemy : MonoBehaviour
             return;
 
         Vector2 dirVec = target.position - rigid.position;
+
         nextVec = dirVec.normalized * speed * Time.fixedDeltaTime;
+
         rigid.MovePosition(rigid.position + nextVec);
         rigid.velocity = Vector2.zero;
     }
@@ -36,7 +44,6 @@ public class Enemy : MonoBehaviour
     {
         if (isLive)
             return;
-        
         anim.SetFloat("MoveX", nextVec.x);
         anim.SetFloat("MoveY", nextVec.y);
         spriter.flipX = target.position.x < rigid.position.x;
