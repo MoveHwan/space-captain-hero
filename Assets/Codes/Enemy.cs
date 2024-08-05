@@ -48,4 +48,9 @@ public class Enemy : MonoBehaviour
         anim.SetFloat("MoveY", nextVec.y);
         spriter.flipX = target.position.x < rigid.position.x;
     }
+
+    void OnEnable()
+    {
+       target = GameManager.Instance.player.GetComponent<Rigidbody2D>();
+    }
 }
