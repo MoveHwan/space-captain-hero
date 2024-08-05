@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - buff
+  - Ground
+  - Area
   layers:
   - Default
   - TransparentFX
