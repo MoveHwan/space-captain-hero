@@ -27,7 +27,7 @@ public class Reposition : MonoBehaviour
                 }                                                               // dirX (좌표 이동이 음수 즉 X축 기준 왼쪽일경우 음수)
                 
                 else if (diffX < diffY){                                        // 타일맵을 수직으로 움직이기 위한 조건문
-                    transform.Translate(Vector3.up * dirY * 48);             // 위치 이동 위쪽 기준으로 dirY 방향으로 48칸
+                    transform.Translate(Vector3.up * dirY * 48);                // 위치 이동 위쪽 기준으로 dirY 방향으로 48칸
                 }                                                               // dirY (좌표 이동이 음수 즉 Y축 기준 아래일경우 음수)
 
                 break;
