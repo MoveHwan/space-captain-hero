@@ -7,7 +7,7 @@ TagManager:
   - buff
   - Ground
   - Area
-  - Asteroid
+  - Enemy
   layers:
   - Default
   - TransparentFX

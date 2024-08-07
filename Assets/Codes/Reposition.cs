@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Reposition : MonoBehaviour
 {
+    Collider2D coll;
+
+    void Awake()
+    {
+        coll = GetComponent<Collider2D>();
+    }
     void OnTriggerExit2D(Collider2D collision)
     {
         if (!collision.CompareTag("Area"))      // 콜라이더 태그 Area 아닐 시 리턴
@@ -31,8 +37,11 @@ public class Reposition : MonoBehaviour
                 }                                                               // dirY (좌표 이동이 음수 즉 Y축 기준 아래일경우 음수)
 
                 break;
-            case "Enemy":
-
+            case "Enemy":                                                       // 적 재배치
+                if (coll.enabled)
+                {
+                    transform.Translate(playerDir * 20 + new Vector3(Random.Range(-3f,3f), Random.Range(-3f, 3f), 0f));
+                }
                 break;
         }
 
