@@ -30,9 +30,9 @@ public class Spawner : MonoBehaviour
 
     void Spawn()
     {
-        GameObject enemy = GameManager.Instance.pool.Get(0);                                    // PoolManager에서 정의한 몹들의 값을 랜덤으로 불러와서 enemy에 저장
+        GameObject enemy = GameManager.Instance.pool.Get(0);                                    // PoolManager에서 정의한 몹들의 값을 불러와서 enemy에 저장
         enemy.transform.position = spawnPoint[Random.Range(1,spawnPoint.Length)].position;      // 마구찍은 스폰포인트중 랜덤으로 소환
-        enemy.GetComponent<Enemy>().Init(spawnData[level]);
+        enemy.GetComponent<Enemy>().Init(spawnData[level]);                                     // 레벨에 따른 소환
     }
 }
 

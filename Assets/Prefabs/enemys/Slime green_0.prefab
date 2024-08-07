@@ -189,7 +189,7 @@ MonoBehaviour:
   maxHealth: 0
   animCon:
   - {fileID: 9100000, guid: c418774019c2cb146a87fa877c231e9c, type: 2}
-  - {fileID: 9100000, guid: d8fa33ddfcd6dda4b8efc9f6211d0b98, type: 2}
+  - {fileID: 9100000, guid: c418774019c2cb146a87fa877c231e9c, type: 2}
   target: {fileID: 0}
 --- !u!114 &3191798495314953308
 MonoBehaviour:
